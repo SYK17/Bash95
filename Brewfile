@@ -1,0 +1,6 @@
+brew "bat"
+brew "btop"
+brew "fzf"
+brew "hello"
+brew "ripgrep"
+brew "the_silver_searcher"
