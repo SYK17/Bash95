@@ -160,3 +160,20 @@ fi
 
 alias report="source ~/.machine_report_wsl.sh"
 
+# -------------------------------------------------------------------------------------------------
+
+# USGC BASH PROMPT
+if [[ $- == *i* ]]; then
+  export CLICOLOR=1  # Tells 'ls' and other tools to use color
+
+  # Below code only works for BSD 'ls'command (e.g. macOS) not GNU 'ls' command (e.g. Linux).
+  # export LSCOLORS=GxFxCxDxBxegedabagaced
+
+  # Generates and sets color codes for GNU 'ls'
+  eval $(dircolors -b)
+
+  export PS1="\[$(tput setaf 7)\]❬\h❭ \[$(tput setaf 2)\]\W\[$(tput setaf 1)\] ●\[$(tput sgr0)\] "
+fi
+
+# -------------------------------------------------------------------------------------------------
+
